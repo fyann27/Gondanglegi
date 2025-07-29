@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang di Desa Gondanglegi, Kebumen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Desa Gondanglegi</div>
+            <ul>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#potensi">Potensi</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#peta">Peta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Menjelajahi Keindahan Desa Gondanglegi</h1>
+                <p>Kecamatan Ambal, Kabupaten Kebumen</p>
+                <a href="#tentang" class="button-utama">Lihat Selengkapnya</a>
+            </div>
+        </section>
+
+        <section id="tentang" class="content-section">
+            <h2>Tentang Desa Kami</h2>
+            <p>
+                Desa Gondanglegi merupakan sebuah desa yang berada di wilayah pesisir selatan Kabupaten Kebumen, terletak di Kecamatan Ambal, Kabupaten Kebumen, Jawa Tengah. Desa Gondanglegi memiliki tiga dusun yaitu Dusun Pendul, Dusun Krajan, dan Dusun Sanggup. Sebagian besar masayarakat Gondanglegi mayoritas berfokus ke tiga sektor utama yaitu Pertanian, Peternakan, dan UMKM Emping. Namun, di balik potensinya yang besar, Desa Gondanglegi juga dihadapkan pada sebuah tantangan alam yang signifikan. Sebagai wilayah yang sangat bergantung pada sektor pertanian, ancaman kekeringan menjadi risiko serius, terutama saat musim kemarau panjang. Keterbatasan sumber air pada musim tersebut dapat secara langsung mengganggu produktivitas lahan pertanian yang menjadi tumpuan utama kehidupan warga.
+            </p>
+        </section>
+
+        <section id="potensi" class="content-section bg-light">
+            <h2>Potensi Unggulan Desa</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="assets/sawah.jpg" alt="Pertanian Padi">
+                    <h3>Pertanian</h3>
+                    <p>Lahan sawah yang luas menjadi potensi utama, menghasilkan padi berkualitas tinggi setiap musim panen.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/ternak.jpg" alt="Peternakan">
+                    <h3>Peternakan</h3>
+                    <p>Peternakan salah satu sumber pencaharian masyarakat Gondanglegi, terutama peternakan sapi dan kambing.</p>
+                </div>
+                <div class="card">
+                     <img src="assets/emping.jpg" alt="UMKM Emping">
+                    <h3>UMKM Emping</h3>
+                    <p>Masyarakat aktif dalam usaha kecil dan menengah, seperti memproduksi makanan olahan khas Desa Gondangle yaitu Emping Melinjo.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="galeri" class="content-section">
+            <h2>Galeri Desa Gondanglegi</h2>
+            <div class="gallery-container">
+                 <img src="assets/Suasana.jpg" alt="Foto suasana desa">
+                <img src="assets/Kegiatan Warga.jpg" alt="Foto kegiatan warga">
+                <img src="assets/Panen.jpg" alt="Foto hasil panen">
+                <img src="assets/Yasin.jpg" alt="Foto Kegiatan Warga">
+            </div>
+        </section>
+
+        <section id="video" class="content-section bg-light">
+            <h2>Video Profil Desa</h2>
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="assets/video-profil.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+            </div>
+        </section>
+
+        <section id="peta" class="content-section map-cta">
+            <h2>Peta Wilayah Desa</h2>
+            <p>Lihat Peta Desa Gondanglegi.</p>
+            <button id="tombolBukaPeta" class="button-utama">Lihat Peta</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - KKN Desa Gondanglegi, Kebumen</p>
+    </footer>
+
+    <div id="modalPeta" class="modal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content" id="gambarPetaLayout" src="assets/peta.png">
+        <div id="caption">Peta Layout Desa Gondanglegi</div>
+    </div>
+
+    <script>
+        // Ambil elemen-elemen yang dibutuhkan
+        var modal = document.getElementById("modalPeta");
+        var btn = document.getElementById("tombolBukaPeta");
+        var span = document.getElementsByClassName("close-button")[0];
+
+        // Saat tombol "Lihat Peta" diklik, tampilkan modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Saat tombol (x) diklik, sembunyikan modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Saat area di luar gambar diklik, sembunyikan juga modalnya
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

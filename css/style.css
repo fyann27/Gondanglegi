@@ -1,0 +1,300 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset dan Variabel Warna */
+:root {
+    --primary-color: #2E8B57; /* Sea Green */
+    --secondary-color: #3CB371; /* Medium Sea Green */
+    --background-light: #f8f9fa;
+    --text-dark: #343a40;
+    --text-light: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Membuat scroll dari nav menjadi mulus */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* Header dan Navigasi */
+header {
+    background-color: rgba(46, 139, 87, 0.85); /* Warna utama dengan transparansi */
+    color: var(--text-light);
+    padding: 1rem 5%;
+    position: fixed; /* Membuat header tetap di atas saat scroll */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Efek blur pada background */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Warna emas saat hover */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    /* GANTI URL GAMBAR DI BAWAH INI */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080.png?text=Pemandangan+Desa+Gondanglegi') no-repeat center center/cover;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Tombol Utama */
+.button-utama {
+    background: var(--secondary-color);
+    color: var(--text-light);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.button-utama:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Bagian Konten Umum */
+.content-section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.content-section > p {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.bg-light {
+    background-color: var(--background-light);
+}
+
+/* Kartu Potensi Desa */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    width: 320px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efek kartu terangkat saat disentuh mouse */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20px 20px 10px 20px;
+    color: var(--primary-color);
+}
+
+.card p {
+    padding: 0 20px 20px 20px;
+}
+
+/* Galeri */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 3rem;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05); /* Efek zoom pada gambar galeri */
+}
+
+/* Video Section */
+.video-wrapper {
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+    box-shadow: var(--shadow);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+}
+
+/* Map Call-to-Action */
+.map-cta {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.map-cta h2, .map-cta p {
+    color: var(--text-light);
+}
+
+/* Footer */
+footer {
+    background: var(--text-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* WAJIB: Styling untuk kontainer peta di peta.html (tidak berubah) */
+#map {
+    width: 100%;
+    height: 100vh; 
+    margin: 0;
+}
+
+/* ================== */
+/* STYLING MODAL PETA */
+/* ================== */
+
+/* Latar belakang gelap di belakang modal */
+.modal {
+    display: none; /* Awalnya tersembunyi */
+    position: fixed;
+    z-index: 2000; /* Harus di atas navbar */
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Konten modal (gambar peta) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 5px;
+}
+
+/* Animasi untuk modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Tombol close (X) */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Teks caption di bawah gambar */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
